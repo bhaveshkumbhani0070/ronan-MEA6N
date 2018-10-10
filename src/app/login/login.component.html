@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center v-center main">
+          <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+          <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+          <p id="profile-name" class="profile-name-card">CLIENT LOGIN</p>
+
+          <form class="form-signin" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+              <span id="reauth-email" class="reauth-email"></span>
+              <input type="text" class="form-control" name="mobile" [(ngModel)]="model.mobile" #mobile="ngModel" [ngClass]="{ 'is-invalid': f.submitted && mobile.invalid }" required placeholder="Email Mobile" autofocus>
+              <div *ngIf="f.submitted && mobile.invalid" class="invalid-feedback">
+                <div *ngIf="mobile.errors.required">Mobile is required</div>
+            </div>
+              <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6">
+              <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                <div *ngIf="password.errors.required">Password is required</div>
+            </div>
+              <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+          </form><!-- /form -->
+
+          <a href="#" class="forgot-password">
+              Forgot password?
+          </a>
+        </div>
+    </div>
+</div>
