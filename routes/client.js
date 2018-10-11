@@ -7,10 +7,10 @@ var jwt = require("jsonwebtoken");
 var validator = require('validator');
 var config=require('./config');
 var connection = mysql.createConnection({
-    host: "",
-    user: "",
-    password: "",
-    database : ''
+    host: "213.175.201.170",
+    user: "romanov",
+    password: "DdhdhY45$%&rhdhdt%",
+    database : 'romanov_business'
 });
 
 /* GET home page. */
