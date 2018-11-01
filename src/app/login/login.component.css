@@ -18,6 +18,31 @@
     border-radius: 50%; */
 }
 
+@media(max-width:479px){
+    .profile-img-card {
+        width: 88px;
+        height: 91px;
+        margin: 0 auto 18px;
+        display: block;
+    }
+}
+@media(min-width:480px) and (max-width:574px){
+    .profile-img-card {
+        width: 143px;
+        height: 130px;
+        margin: 0 auto 18px;
+        display: block;
+    }
+}
+@media(min-width:575px) and (max-width:767px) {
+    .profile-img-card {
+        width: 202px;
+        height: 174px;
+        margin: 0 auto 18px;
+        display: block;
+    }
+}
+
 /*
  * Form styles
  */

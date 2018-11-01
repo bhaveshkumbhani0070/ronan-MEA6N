@@ -15,10 +15,5 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotologin= function () {
-    this.router.navigateByUrl('/login');
-  };
-  gotoregister=function(){
-    this.router.navigateByUrl('/register');
-  }
+
 }

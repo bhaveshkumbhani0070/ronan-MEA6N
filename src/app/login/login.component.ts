@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientServiceService } from '../client-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,8 @@ import { ClientServiceService } from '../client-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private service:ClientServiceService) { }
+  constructor(private service:ClientServiceService,
+    private router: Router) { }
   model: any = {};
 
   ngOnInit() {
@@ -18,11 +20,20 @@ export class LoginComponent implements OnInit {
     this.service.login(this.model)
       .subscribe(res => {
         console.log('res',res);
+        if(res.status=='Success'){
+
+        }
+        else{
+          console.log('Error',res.message);
+        }
           // let id = res['_id'];
           // this.router.navigate(['/book-details', id]);
-        }, (err) => {
+      }, (err) => {
           console.log(err);
-        }
-      );
+      });
+  }
+
+  forgotpassword(){
+    this.router.navigateByUrl('/forgot');
   }
 }

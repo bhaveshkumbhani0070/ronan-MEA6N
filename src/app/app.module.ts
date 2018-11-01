@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { VerifieMobileComponent } from './verifie-mobile/verifie-mobile.component';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     LoginComponent,
     VerifieMobileComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
